@@ -1,24 +1,25 @@
-# Fan-Out / Fan-In Pattern
+# Patrón Fan-Out / Fan-In
 
-The Fan-Out / Fan-In pattern is a core orchestration design used when a single input must be split into multiple parallel tasks and later consolidated into a single result.  
-It enables massive parallelism while preserving a controlled and deterministic workflow.
+El patrón Fan-Out / Fan-In es un diseño fundamental de orquestación que se utiliza cuando una única entrada debe dividirse en múltiples tareas paralelas y posteriormente consolidarse en un único resultado.  
+Permite un paralelismo masivo al mismo tiempo que mantiene un flujo de trabajo controlado y determinista.
 
-In the orchestration architecture, this pattern is implemented by the orchestration layer distributing work across multiple stateless functions and then aggregating their results.
+En la arquitectura de orquestación, este patrón es implementado por la capa de orquestación, la cual distribuye el trabajo entre múltiples funciones sin estado (*stateless*) y luego agrega sus resultados.
 
 ---
 
-## Conceptual Model
+## Modelo Conceptual
 
 ```text
-                Input Event
-                     ↓
-                Orchestrator
-        ┌─────────────┼─────────────┐
-        ↓             ↓             ↓
-   Task Function A  Task Function B  Task Function C
-        ↓             ↓             ↓
-        └─────────────┼─────────────┘
-                     ↓
-               Aggregation Step
-                     ↓
-                Final Result
+               Evento de Entrada
+                       ↓
+                  Orquestador
+        ┌──────────────┼──────────────┐
+        ↓              ↓              ↓
+ Función Tarea A  Función Tarea B  Función Tarea C
+        ↓              ↓              ↓
+        └──────────────┼──────────────┘
+                       ↓
+              Paso de Agregación
+                       ↓
+                Resultado Final
+```

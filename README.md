@@ -1,52 +1,52 @@
-# Serverless Orchestration Patterns
+# Patrones de Orquestación Serverless
 
-This repository is a technical and architectural showcase focused on **serverless orchestration patterns** used in modern cloud-native systems.  
-It is designed to demonstrate senior-level thinking in distributed systems, workflow orchestration, fault tolerance, and event-driven design.
+Este repositorio es una muestra técnica y arquitectónica enfocada en los **patrones de orquestación serverless** utilizados en los sistemas modernos nativos de la nube (*cloud-native*).  
+Está diseñado para demostrar un criterio de nivel sénior en sistemas distribuidos, orquestación de flujos de trabajo, tolerancia a fallos y diseño dirigido por eventos (*event-driven*).
 
-This is not a software product.  
-It is an **architecture portfolio** that reflects how real production systems are designed.
-
----
-
-## Project Objective
-
-Show how complex workflows can be built using small, composable, and stateless serverless components, covering:
-
-- Event-driven design  
-- Workflow orchestration  
-- Error handling and retries  
-- Fault tolerance  
-- Observability and logging  
-- Scalability by design  
-
-The goal is to demonstrate *system design maturity*, not only coding skills.
+Este proyecto no es un producto de software.  
+Es un **portafolio de arquitectura** que refleja cómo se diseñan los sistemas reales en producción.
 
 ---
 
-## Architectural Philosophy
+## Objetivo del Proyecto
+
+Mostrar cómo se pueden construir flujos de trabajo complejos utilizando componentes *serverless* pequeños, componibles y sin estado (*stateless*), abarcando:
+
+- Diseño dirigido por eventos (*event-driven design*)  
+- Orquestación de flujos de trabajo  
+- Manejo de errores y reintentos  
+- Tolerancia a fallos  
+- Observabilidad y registro (*logging*)  
+- Escalabilidad por diseño  
+
+El objetivo es demostrar *madurez en el diseño de sistemas*, no solo habilidades de programación.
+
+---
+
+## Filosofía Arquitectónica
 
 ```text
-[ Events / Triggers ]
+[ Eventos / Disparadores (Triggers) ]
 ↓
-[ Stateless Functions ]
+[ Funciones Sin Estado (Stateless) ]
 ↓
-[ Orchestration Layer ]
+[ Capa de Orquestación ]
 ↓
-[ External Services / APIs / Databases ]
+[ Servicios Externos / APIs / Bases de Datos ]
 ```
 
-Key principles:
-- Loose coupling  
-- High cohesion  
-- Idempotency  
-- Resilience  
-- Observability  
+Principios clave:
+- Bajo acoplamiento (*loose coupling*)  
+- Alta cohesión  
+- Idempotencia  
+- Resiliencia  
+- Observabilidad  
 
-These principles are common to production-grade serverless architectures.
+Estos principios son fundamentales en arquitecturas *serverless* de grado de producción.
 
 ---
 
-## 📁 Project Structure
+## 📁 Estructura del Proyecto
 
 ```text
 serverless-orchestration-patterns/
@@ -63,70 +63,70 @@ serverless-orchestration-patterns/
 
 ---
 
-## Patterns Covered
+## Patrones Cubiertos
 
-### 1. Event-Driven Architecture
-- Asynchronous, message-based workflows  
-- Loose coupling between components  
-- High scalability and fault isolation  
+### 1. Arquitectura Dirigida por Eventos (Event-Driven)
+- Flujos de trabajo asíncronos basados en mensajes  
+- Bajo acoplamiento entre componentes  
+- Alta escalabilidad y aislamiento de fallos  
 
-### 2. Retry & Idempotency Pattern
-- Safe retries without duplicated processing  
-- Handling transient failures  
-- Designing idempotent serverless functions  
+### 2. Patrón de Reintento e Idempotencia (Retry & Idempotency)
+- Reintentos seguros sin procesamiento duplicado  
+- Manejo de fallos transitorios  
+- Diseño de funciones *serverless* idempotentes  
 
-### 3. Fan-Out / Fan-In Pattern
-- Parallel task execution  
-- Aggregation of results  
-- Common in batch and high-volume processing systems  
+### 3. Patrón Fan-Out / Fan-In
+- Ejecución paralela de tareas  
+- Agregación de resultados  
+- Común en sistemas de procesamiento por lotes (*batch*) y de alto volumen  
 
-### 4. Error Handling & Dead Letter Queues
-- Centralized error management  
-- Message reprocessing strategies  
-- Isolation of failed workflows  
+### 4. Manejo de Errores y Colas de Mensajes Fallidos (Dead Letter Queues)
+- Gestión centralizada de errores  
+- Estrategias de reprocesamiento de mensajes  
+- Aislamiento de flujos de trabajo fallidos  
 
 ---
 
-## Technology Context
+## Contexto Tecnológico
 
-These patterns are applicable to any modern serverless stack, such as:
+Estos patrones son aplicables a cualquier stack *serverless* moderno, tales como:
 
 - Azure Functions + Logic Apps + Service Bus  
 - AWS Lambda + Step Functions + SQS  
 - GCP Cloud Functions + Workflows  
 
-The repository is platform-agnostic by design and focuses on architectural concepts.
+El repositorio es agnóstico a la plataforma por diseño y se centra en conceptos arquitectónicos.
 
 ---
 
-## What This Repository Demonstrates
+## Qué Demuestra Este Repositorio
 
-This repository validates competencies for:
+Este repositorio valida competencias para los siguientes roles:
 
-| Role | Competency |
-|------|-----------|
-| Cloud Architect | System design, scalability, fault tolerance |
-| Senior Software Engineer | Distributed systems architecture |
-| Data Engineer | Orchestration of data pipelines |
-| Automation Engineer | Workflow reliability and resilience |
-
----
-
-## Design Philosophy
-
-This repository focuses on **how to think in serverless**, not only how to implement.
-
-It answers questions such as:
-- How do you design reliable event-driven systems?
-- How do you manage failures in distributed workflows?
-- How do you scale workflows without increasing complexity?
-- How do you observe and debug serverless pipelines?
-
-These are senior-level engineering concerns.
+| Rol | Competencia |
+|-----|-------------|
+| Arquitecto Cloud | Diseño de sistemas, escalabilidad, tolerancia a fallos |
+| Ingeniero de Software Sénior | Arquitectura de sistemas distribuidos |
+| Ingeniero de Datos | Orquestación de pipelines de datos |
+| Ingeniero de Automatización | Confiabilidad y resiliencia de flujos de trabajo |
 
 ---
 
-## Author
+## Filosofía de Diseño
+
+Este repositorio se enfoca en **cómo pensar en serverless**, no solo en cómo implementarlo.
+
+Responde a preguntas tales como:
+- ¿Cómo diseñar sistemas confiables dirigidos por eventos?
+- ¿Cómo gestionar los fallos en flujos de trabajo distribuidos?
+- ¿Cómo escalar flujos de trabajo sin aumentar la complejidad?
+- ¿Cómo observar y depurar pipelines *serverless*?
+
+Estas son inquietudes propias de la ingeniería de nivel sénior.
+
+---
+
+## Autor
 
 **Alejandro Adrián Duhalde**  
 Cloud & Data Engineer | Serverless Architect  
@@ -134,7 +134,7 @@ Python · Azure · AWS · Event-Driven Systems
 
 ---
 
-## ⚠️ Note
+## ⚠️ Nota
 
-This repository is a conceptual and architectural showcase.  
-Code examples are intentionally minimal or illustrative, as the primary focus is system design, orchestration strategy, and engineering best practices rather than full production implementations.
+Este repositorio es una muestra conceptual y arquitectónica.  
+Los ejemplos de código son intencionalmente mínimos o ilustrativos, ya que el enfoque principal es el diseño de sistemas, la estrategia de orquestación y las mejores prácticas de ingeniería, más que implementaciones completas de producción.

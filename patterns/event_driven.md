@@ -1,21 +1,22 @@
-# Event-Driven Architecture Pattern
+# Patrón de Arquitectura Dirigida por Eventos (Event-Driven)
 
-The Event-Driven pattern is the foundation of modern serverless and cloud-native systems.  
-Instead of executing workflows synchronously or in tightly coupled processes, systems react to **events** and propagate them through independent, loosely coupled components.
+El patrón Dirigido por Eventos (*Event-Driven*) es la base de los sistemas modernos *serverless* y nativos de la nube (*cloud-native*).  
+En lugar de ejecutar flujos de trabajo de forma síncrona o en procesos fuertemente acoplados, los sistemas reaccionan ante **eventos** y los propagan a través de componentes independientes y de bajo acoplamiento (*loosely coupled*).
 
-In the orchestration architecture diagram, this pattern begins at the **Event Sources** layer and activates the entire workflow through the orchestration engine.
+En el diagrama de arquitectura de orquestación, este patrón comienza en la capa de **Fuentes de Eventos (*Event Sources*)** y activa todo el flujo de trabajo a través del motor de orquestación.
 
-This design allows systems to scale naturally, remain resilient to failures, and evolve without breaking existing components.
+Este diseño permite que los sistemas escalen de forma natural, se mantengan resilientes ante fallos y evolucionen sin afectar a los componentes existentes.
 
 ---
 
-## Conceptual Model
+## Modelo Conceptual
 
 ```text
-[ Event Source ]
-       ↓
-[ Stateless Function ]
-       ↓
-[ Orchestrator ]
-       ↓
-[ External Services / Storage / APIs ]
+[ Fuente de Eventos (Event Source) ]
+                 ↓
+[ Función Sin Estado (Stateless Function) ]
+                 ↓
+[ Orquestador (Orchestrator) ]
+                 ↓
+[ Servicios Externos / Almacenamiento / APIs ]
+```

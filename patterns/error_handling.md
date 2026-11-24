@@ -1,23 +1,24 @@
-# Error Handling & Dead Letter Queue (DLQ) Pattern
+# Patrón de Manejo de Errores y Dead Letter Queue (DLQ)
 
-In distributed and serverless systems, failures are not exceptions; they are an expected part of normal operation.  
-The Error Handling pattern ensures that failures are **visible, traceable, recoverable, and isolated**, instead of being silently ignored or causing system-wide instability.
+En los sistemas distribuidos y *serverless*, los fallos no son excepciones; son una parte esperada de la operación normal.  
+El patrón de Manejo de Errores (*Error Handling*) garantiza que los fallos sean **visibles, rastreables, recuperables y aislados**, en lugar de ser ignorados silenciosamente o provocar inestabilidad en todo el sistema.
 
-In the orchestration architecture, this pattern is represented by the **Error Events flow** and the **Dead Letter Queue (DLQ)**.
+En la arquitectura de orquestación, este patrón está representado por el **flujo de Eventos de Error** (*Error Events flow*) y la **Cola de Mensajes Fallidos (*Dead Letter Queue* - DLQ)**.
 
 ---
 
-## Conceptual Model
+## Modelo Conceptual
 
 ```text
-Task Execution
+Ejecución de la Tarea
      ↓
-  Failure Detected
+  Fallo Detectado
      ↓
-Retry Policy Applied
+Política de Reintentos Aplicada
      ↓
-Success → Continue Workflow
+Éxito → Continuar Flujo de Trabajo
      ↓
-Failure After Retries
+Fallo Tras los Reintentos
      ↓
-Dead Letter Queue (DLQ)
+Cola de Mensajes Fallidos (DLQ)
+```
